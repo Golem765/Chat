@@ -2,6 +2,7 @@ package chat;
 
 /**
  * Created by Golem765 on 26.04.2016.
+ *
  */
 public enum MessageType
 {

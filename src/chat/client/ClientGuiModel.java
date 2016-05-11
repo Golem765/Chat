@@ -6,33 +6,34 @@ import java.util.Set;
 
 /**
  * Created by Golem765 on 11.05.2016.
+ *
  */
-public class ClientGuiModel
+class ClientGuiModel
 {
     private final Set<String> allUserNames = new HashSet<>();
     private String newMessage;
 
-    public void addUser(String newUserName)
+    void addUser(String newUserName)
     {
         allUserNames.add(newUserName);
     }
 
-    public void deleteUser(String userName)
+    void deleteUser(String userName)
     {
         allUserNames.remove(userName);
     }
 
-    public Set<String> getAllUserNames()
+    Set<String> getAllUserNames()
     {
         return Collections.unmodifiableSet(allUserNames);
     }
 
-    public String getNewMessage()
+    String getNewMessage()
     {
         return newMessage;
     }
 
-    public void setNewMessage(String newMessage)
+    void setNewMessage(String newMessage)
     {
         this.newMessage = newMessage;
     }

@@ -19,7 +19,7 @@ public class Server
         int port = ConsoleHelper.readInt();
         try(ServerSocket serverSocket = new ServerSocket(port))
         {
-            ConsoleHelper.writeMessage("chat.Server has started");
+            ConsoleHelper.writeMessage("Server has started");
             while (true)
             {
                 new Handler(serverSocket.accept()).start();
@@ -76,7 +76,7 @@ public class Server
                 connectionMap.remove(name);
                 sendBroadcastMessage(new Message(MessageType.USER_REMOVED, name));
             }
-            ConsoleHelper.writeMessage("chat.Connection to remote address closed.");
+            ConsoleHelper.writeMessage("Connection to remote address closed.");
         }
 
         private String serverHandshake(Connection connection) throws IOException, ClassNotFoundException

@@ -23,7 +23,7 @@ public class BotClient extends Client
         @Override
         protected void clientMainLoop() throws IOException, ClassNotFoundException
         {
-            sendTextMessage("Привет чатику. Я бот. Понимаю команды: дата, день, месяц, год, время, час, минуты, секунды.");
+            sendTextMessage("Hi chat. I am bot. Understand commands: date, day, month, year, time, hour, minutes, seconds.");
             super.clientMainLoop();
         }
 
@@ -37,28 +37,28 @@ public class BotClient extends Client
                 String format;
                 switch (sp[1])
                 {
-                    case "дата":
+                    case "date":
                         format = "d.MM.YYYY";
                         break;
-                    case "день":
+                    case "day":
                         format = "d";
                         break;
-                    case "месяц":
+                    case "month":
                         format = "MMMM";
                         break;
-                    case "год":
+                    case "year":
                         format = "YYYY";
                         break;
-                    case "время":
+                    case "time":
                         format = "H:mm:ss";
                         break;
-                    case "час":
+                    case "hour":
                         format = "H";
                         break;
-                    case "минуты":
+                    case "minutes":
                         format = "m";
                         break;
-                    case "секунды":
+                    case "seconds":
                         format = "s";
                         break;
                     default:
@@ -66,7 +66,7 @@ public class BotClient extends Client
                 }
                 SimpleDateFormat sdf = new SimpleDateFormat(format);
                 Calendar calendar = Calendar.getInstance();
-                sendTextMessage(String.format("Информация для %s: %s",sp[0], sdf.format(calendar.getTime())));
+                sendTextMessage(String.format("Information for %s: %s",sp[0], sdf.format(calendar.getTime())));
             }
         }
     }

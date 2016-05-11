@@ -82,7 +82,7 @@ public class Client
                         notifyConnectionStatusChanged(true);
                         return;
                     default:
-                        throw new IOException("Unexpected chat.MessageType");
+                        throw new IOException("Unexpected MessageType");
                 }
             }
         }
@@ -104,7 +104,7 @@ public class Client
                         informAboutDeletingNewUser(m.getData());
                         break;
                     default:
-                        throw new IOException("Unexpected chat.MessageType");
+                        throw new IOException("Unexpected MessageType");
                 }
             }
         }
@@ -129,11 +129,11 @@ public class Client
         }
         if(clientConnected)
         {
-            ConsoleHelper.writeMessage("Соединение установлено. Для выхода наберите команду 'exit'.");
+            ConsoleHelper.writeMessage("Connection established, for exiting enter 'exit'.");
         }
         else
         {
-            ConsoleHelper.writeMessage("Произошла ошибка во время работы клиента.");
+            ConsoleHelper.writeMessage("Problem occurred on working with server.");
         }
         String s;
         while(clientConnected)

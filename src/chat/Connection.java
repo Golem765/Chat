@@ -9,6 +9,7 @@ import java.net.SocketAddress;
 
 /**
  * Created by Golem765 on 26.04.2016.
+ *
  */
 public class Connection implements Closeable
 {

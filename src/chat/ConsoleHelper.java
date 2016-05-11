@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * Created by Golem765 on 26.04.2016.
+ *
  */
 public class ConsoleHelper
 {
@@ -29,7 +30,7 @@ public class ConsoleHelper
             }
             catch (IOException ioexception)
             {
-                System.out.println("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
+                System.out.println("Mistake happened on text entering, please, try again:");
             }
         }
         return ret;
@@ -48,7 +49,7 @@ public class ConsoleHelper
             }
             catch (NumberFormatException nfe)
             {
-                System.out.println("Произошла ошибка при попытке ввода числа. Попробуйте еще раз.");
+                System.out.println("Mistake happened on number entering, please, try again:");
             }
         }
         return ret;
